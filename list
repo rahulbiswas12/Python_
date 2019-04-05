@@ -1,0 +1,9 @@
+##List=["Python","For","Game"]
+##print("Accessing a element from the list")
+##print(List[0])
+##print(List[2])
+
+List = [['Pytho','For'],['AI']]
+print("Accessing a element from a Multi-Dimensional list")
+print(List[0][1])
+print(List[1][0])
