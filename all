@@ -1,0 +1,435 @@
+# Printing Something----------------------------------------------------------------------------------------
+print("Hello world")
+
+
+# Printing Geometrical Shape (Not a good way)---------------------------------------------------------------
+print("   /|")
+print("  / |")
+print(" /  |")
+print("/___|")
+
+
+# Variables-------------------------------------------------------------------------------------------------
+character_name = "John"              # string
+character_age = 35                   # integer
+is_male = True                       # boolean value (True or False)
+print("There once was a man named " + character_name + ", ")
+print("he was %d years old. ", character_age)
+character_name = "Mike"              # changing the value
+print("he really liked the name " + character_name + ", ")
+print("but didn't like being %d.", character_age)
+
+
+# Escape character------------------------------------------------------------------------------------------
+print("Dore\"mon\nPi\\k\'achu")
+
+
+# String concatenation--------------------------------------------------------------------------------------
+phrase = "ABC"
+print(phrase)
+print(phrase + "DE")
+
+
+# String functions------------------------------------------------------------------------------------------
+phrase = "ABCB"
+print(phrase.isupper())                # uppercase or not
+print(phrase.islower())                # lowercase or not
+print(phrase.lower())                  # converts into lowercase
+print(phrase.upper())                  # converts into uppercase
+print(phrase.lower().islower())        # converts into lowercase and checks lowercase or not
+print(len(phrase))                     # prints the length of the string
+print(phrase[0])                       # prints the 0 index item of the string
+print(phrase.index("B"))               # returns the index where 'B' first occures
+print(phrase.index("BC"))              # returns the index where 'BC' first occures
+print(phrase.replace("B","XM"))        # replace the 'B' with 'XM' where 'B' occures
+
+
+# Mathematical operations and functions---------------------------------------------------------------------
+from math import *
+print(2)
+print(2.09)
+print(-2.09)
+print(3+4)             # addition
+print(3-4)             # subtraction
+print(3*4)             # multiplication
+print(3/4)             # division
+print(60%23)           # modulas (remainder)
+my_num = -5            # variable
+print(my_num)
+print(str(my_num) + " is my favourite number")     # converting int to string (typecasting)
+print(abs(my_num))     # absolute value
+print(pow(3, 2))       # 3^2
+print(max(4,5,7))      # maximum value
+print(round(3.79))     # rounding
+print(min(4,9))        # minimum value
+print(floor(3.4))      # floor
+print(floor(3.7))
+print(ceil(3.4))       # ceil
+print(sqrt(81))        # square root
+
+
+# User input------------------------------------------------------------------------------------------------
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+print("Hello " + name + "! You are " + age + " years old")
+
+
+# Building basic calcultor----------------------------------------------------------------------------------
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+result = float(num1) + float(num2)
+print(result)
+
+
+# Madlibs game----------------------------------------------------------------------------------------------
+color = input("Enter a color: ")
+plural_noun = input("Enter a plural noun: ")
+celebrity = input("Enter a celebrity: ")
+print("Roses are " + color)
+print(plural_noun + " are blue")
+print("I love " + celebrity)
+
+
+
+# Lists-----------------------------------------------------------------------------------------------------
+friends = ["EEW", 2, "FDY", True]   # content of list can be anything
+print(friends)                      # printing list
+print(friends[2])                   # printing 2 index item of the list
+print(friends[-1])                  # printing last item of the list
+print(friends[1:])                  # printing 1 to last index items
+print(friends[1:3])                 # printing 1 to (3-1) index items
+print(friends[:3])                  # printing first to (3-1) index items
+friends[3] = False                  # changing the value of 3 index item (The list will change)
+print(friends)                      # printing the new list
+
+
+# List functions--------------------------------------------------------------------------------------------
+lucky_numbers = [4, 8, 5, 6, 23, 42]
+friends = ["Kevin", "Kern", "Jim", "Oscar", "Jim"]
+print(friends)
+friends.extend(lucky_numbers)                  # merging two lists
+print(friends)                                 # printing new list friends
+friends.append("creed")                        # appending new item
+print(friends)                                 # printing new list friends
+friends.insert(2, "kelly")                     # inserting new element to a particular index
+print(friends)                                 # printing new list friends
+friends.remove("Jim")                          # removing item
+print(friends)                                 # printing new list friends
+friends.pop()                                  # removing last element
+print(friends)                                 # printing new list friends
+print(friends.index("Kevin"))                  # printing the index of the element
+friends.clear()                                # deleting list
+print(friends)                                 # printing new list friends
+friends = ["Kevin", "Kern", "Jim", "Jim", "oscar"]
+print(friends.count("Jim"))                    # prints number of occurence of that particular item
+lucky_numbers.sort()                           # sorted numbers by increasing order
+friends.sort()                                 # sorted elements by alphabetical order
+print(lucky_numbers)                           # printing new list of lucky_numbers
+print(friends)                                 # printing new list friends
+lucky_numbers.reverse()                        # reversing the list
+print(lucky_numbers)                           # printing new list of lucky_numbers
+friends2 = friends.copy()                      # making a copy of friends list into another list
+print(friends2)                                # printing the another list
+
+
+# Tuples----------------------------------------------------------------------------------------------------
+corodinates = (4, 5)                           # tuples are immutable
+print(corodinates[0])
+new_coordinates = [(3,4),(5,6),(7,6),(9,3)]    # list of tuples
+print(new_coordinates)
+new_coordinates[3] = (2,4)
+print(new_coordinates)
+
+
+# Functions-------------------------------------------------------------------------------------------------
+def say_hi():                                  # defining function
+    print("Hello user")
+
+
+def say_hi2(name, age):                        # defining function with arguments
+    print("Hello " + name + " you are " + str(age) + " years old")
+
+
+print("Top")
+say_hi()                                       # calling function
+print("Bottom")
+say_hi2("Tanmoy", 20)                          # calling function with arguments
+
+
+# Return statement------------------------------------------------------------------------------------------
+def cube(num):
+    return num*num*num
+    print("this will not get printed")
+
+
+result = (cube(3))
+print(result)
+
+
+# If, elif, else statements --------------------------------------------------------------------------------
+is_male = True
+is_tall = True
+
+if is_male or is_tall:
+    print("You are male or tall")
+else:
+    print("You are not male or tall")
+if is_male and is_tall:
+    print("You are male and tall")
+elif is_male and not(is_tall):
+    print("you are male but not tall")
+else:
+    print("You are not male a& not tall")
+
+
+# Logical operators----------------------------------------------------------------------------------------
+def max_num(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:            # we can compare all types of data
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+
+print(max_num(4, 7, 9))                          # all logical operators
+
+
+# Building a better calculator-----------------------------------------------------------------------------
+num1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter second number: "))
+
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "*":
+    print(num1 * num2)
+elif op == "/":
+    print(num1 / num2)
+else:
+    print("Invlid operator")
+
+
+# Dictionary----------------------------------------------------------------------------------------------
+monthConversions = {
+    "Jan": "January",
+    "Feb": "February",
+    "Oct": "October"
+}
+print(monthConversions["Oct"])
+print(monthConversions.get("Dec", "Not a valid key"))     # print(monthConversions.get("Dec")) gives error
+
+
+# While loop----------------------------------------------------------------------------------------------
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+print("Done with loop")
+
+
+# Building a guessing game--------------------------------------------------------------------------------
+secret_word = "dora"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+while guess != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = input("Enter guess: ")
+        guess_count += 1
+
+    else:
+        out_of_guesses = True
+if out_of_guesses:
+    print("you loose")
+else:
+    print("You win")
+
+# For loop-----------------------------------------------------------------------------------------------
+for letter in "Doremon":
+    print(letter)
+
+friends = ["Jim", "Karen", "Kevin"]
+for i in friends:
+    print(i)
+
+for i in range(10):
+    print(i)
+
+for i in range(3, 10):
+    print(i)
+
+for i in range(len(friends)):
+    print(friends[i])
+
+for index in range(5):
+    if index == 0:
+        print("first iteration")
+    else:
+        print("Not first")
+
+
+# Power function-----------------------------------------------------------------------------------------
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+
+print(raise_to_power(4,9))
+
+
+# 2D list & nested loops---------------------------------------------------------------------------------
+number_grid = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [0]
+]
+print(number_grid[0][2])            # [row][column]
+for row in number_grid:
+    for col in row:
+        print(col)
+
+
+# Basic translator---------------------------------------------------------------------------------------
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter.lower() in "aeiou":
+            if letter.isupper():
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+
+
+print(translate(input("Enter a phrase to translate: ")))
+
+# Single line comments ----------------------------------------------------------------------------------
+
+
+'''
+'''
+
+
+# Try except block---------------------------------------------------------------------------------------
+try:
+    number = int(input("Enter a number: "))
+    print(number)
+except:
+    print("Invalid input")
+
+try:
+    value = 10 / 0
+    number = int(input("Enter a number: "))
+    print(number)
+except:
+    print("Invalid input")
+
+
+try:
+    value = 10 / 0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError:
+    print("divided by zero")
+except ValueError as error:
+    print(error)
+
+
+# File I/O-----------------------------------------------------------------------------------------------
+employee_file = open("employees.txt", "r")                            # opening file
+print(employee_file.readable())                                       # file is readable or not
+print(employee_file.read())                                           # printing entire file
+print(employee_file.readline())                                       # printing first line
+print(employee_file.readline())                                       # printing next line
+print(employee_file.readlines())                                      # printing all lines inside list
+#print(employee_file.readlines()[1])
+for employee in employee_file.readlines():
+    print(employee)
+employee_file.close()                                                 # closing file
+
+
+# Appending files----------------------------------------------------------------------------------------
+employee_file = open("employees.txt", "a")                            # appending
+employee_file.write("Toby - Human resources")
+employee_file.write("\nKelly - customer service")
+employee_file.close()
+
+
+# Writing files------------------------------------------------------------------------------------------
+employee_file = open("employees1.txt", "w")                           # appending
+employee_file.write("Toby - Human resources")
+employee_file.write("\nKelly - customer service")
+employee_file.close()
+
+
+# Modules and pips---------------------------------------------------------------------------------------
+import useful_tools                                                   # importing useful_tools
+print(useful_tools.roll_dice(10))
+
+# search python built-in(in lib folder) and external modules
+# search python.docx
+# download pip
+# open cmd
+# check if installed pip --version
+# in lib folder site-packages
+
+
+# Classes and objects------------------------------------------------------------------------------------
+from student import student
+
+student1 = student("Jim", "Business", 3.1, False)
+print(student1.gpa)
+
+
+# Multiple choice quiz-----------------------------------------------------------------------------------
+from question import question
+question_prompts = [
+    "What color are apples?\n (a)Red \n (b)Purple\n (c)Orange\n",
+    "What color are bananas?\n (a)Teal \n (b)Magenta\n (c)Yellow\n",
+    "What color are strawberries?\n (a)Yellow \n (b)Red\n (c)Blue\n"
+                    ]
+questions = [
+    question(question_prompts[0], "a"),
+    question(question_prompts[1], "c"),
+    question(question_prompts[2], "b")
+]
+
+
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question_prompts)
+        if answer == question.answer:
+            score += 1
+    print("You got " + str(score) + "/"+str(len(questions)) + "correct")
+
+
+run_test(questions)
+
+
+# Object functions--------------------------------------------------------------------------------------
+student1 = student("Jim", "Business", 3.1, False)
+print(student1.on_honor_roll())
+
+
+# Inheritance-------------------------------------------------------------------------------------------
+
+from Chef import Chef
+myChef = Chef()
+myChef.make_special_dish()
+
+from ChineseChef import ChineseChef
+myChef = Chef()
+myChef.make_special_dish()
+
+myChineseChef = ChineseChef()
+myChineseChef.make_special_dish()
